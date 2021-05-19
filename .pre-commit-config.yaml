@@ -1,0 +1,67 @@
+---
+fail_fast: false
+default_stages: [commit, push]
+repos:
+- repo: https://github.com/gruntwork-io/pre-commit
+  rev: v0.1.12
+  hooks:
+  - id: tflint
+    args:
+    - "--module"
+    - "--config=.tflint.hcl"
+  # - id: terraform-validate
+  - id: terraform-fmt
+- repo: git://github.com/antonbabenko/pre-commit-terraform
+  rev: v1.48.0
+  hooks:
+  - id: terraform_docs
+  - id: terraform_tfsec
+    files: ^infrastructure/
+  # - id: checkov
+- repo: git://github.com/pre-commit/pre-commit-hooks
+  rev: v3.4.0
+  hooks:
+  - id: check-merge-conflict
+  - id: check-added-large-files
+    args: ['--maxkb=100']
+  - id: check-case-conflict
+  - id: check-executables-have-shebangs
+  - id: check-json
+  - id: check-symlinks
+  - id: check-xml
+  # - id: check-yaml
+  - id: detect-aws-credentials
+    args: ['--allow-missing-credentials']
+  # - id: detect-private-key
+  - id: end-of-file-fixer
+  - id: fix-byte-order-marker
+  - id: mixed-line-ending
+    args: ['--fix=auto']
+  - id: no-commit-to-branch
+    args: ['-b main', '-b master']
+  #- id: pretty-format-json
+  #  args: ['--autofix', '--no-sort-keys']
+  - id: trailing-whitespace
+    args: [--markdown-linebreak-ext=md]
+- repo: https://github.com/adrienverge/yamllint
+  rev: v1.26.1
+  hooks:
+  - args:
+    - -c
+    - .yamllint.config.yaml
+    id: yamllint
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.0.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: mixed-line-ending
+- repo: https://github.com/Lucas-C/pre-commit-hooks
+  rev: v1.1.10
+  hooks:
+  - id: remove-crlf
+  - id: remove-tabs
+- repo: https://github.com/sirosen/fix-smartquotes
+  rev: 0.2.0
+  hooks:
+  - id: fix-smartquotes

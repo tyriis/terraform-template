@@ -1,0 +1,17 @@
+---
+# see https://yamllint.readthedocs.io/en/stable/index.html for more options
+extends: default
+rules:
+
+  line-length:
+    max: 80
+    level: warning
+
+  indentation:
+    spaces: 2
+    indent-sequences: false
+    check-multi-line-strings: false
+
+  document-start:
+    present: true
+    level: error
