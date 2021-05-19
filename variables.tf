@@ -8,7 +8,7 @@
 # Just an example.
 # Will be set to example if not set.
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-variable "project" {
+variable "example" {
   description = "Just an example."
   type        = string
   default     = "example"

@@ -1,4 +1,4 @@
-# k3s.home terraform
+# Example terraform template
 
 #### Table of Contents
 1. [Usage](#usage)
@@ -29,7 +29,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_project"></a> [project](#input\_project) | Just an example. | `string` | `"example"` | no |
+| <a name="input_example"></a> [example](#input\_example) | Just an example. | `string` | `"example"` | no |
 
 ## Outputs
 
