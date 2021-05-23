@@ -30,6 +30,7 @@ No resources.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_example"></a> [example](#input\_example) | Just an example. | `string` | `"example"` | no |
+| <a name="input_test"></a> [test](#input\_test) | Just another example. | `string` | `"test"` | no |
 
 ## Outputs
 

@@ -1,4 +1,3 @@
----
 # see https://yamllint.readthedocs.io/en/stable/index.html for more options
 extends: default
 rules:
@@ -9,9 +8,9 @@ rules:
 
   indentation:
     spaces: 2
-    indent-sequences: false
+    indent-sequences: true
     check-multi-line-strings: false
 
   document-start:
     present: true
-    level: error
+    level: warning

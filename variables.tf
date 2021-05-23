@@ -13,3 +13,9 @@ variable "example" {
   type        = string
   default     = "example"
 }
+
+variable "test" {
+  description = "Just another example."
+  type        = string
+  default     = "test"
+}
